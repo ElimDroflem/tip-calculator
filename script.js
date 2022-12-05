@@ -2,7 +2,7 @@ const bill = document.getElementById("bill");
 const numberOfPeople = document.getElementById("numberOfPeople");
 const reset = document.getElementById("reset");
 const tipAmount = document.getElementById("tip-amount");
-const totalAmount = document.getElementById("tip-calc-ttal");
+const totalAmount = document.getElementById("tip-calc-total");
 const buttons = document.getElementsByClassName("btn");
 
 let percent = 0;
@@ -11,9 +11,16 @@ reset.addEventListener("click", () => {
   let totalTip = (percent / 100) * bill.value;
   tipAmount.textContent = totalTip / numberOfPeople.value;
 
-  //dahd
+  
+  let total = bill.value + tipAmount.textContent;
+  
+
+    //dahd
   //   let total = bill.value + tipAmount.textContent;
   //   totalAmount.textContent = total / numberOfPeople.value;
+  let addit = +bill.value + totalTip;
+  console.log("Conors Maths: " + addit);
+  totalAmount.textContent = addit;
   console.log(totalTip);
 });
 
@@ -21,7 +28,9 @@ percentSelector = () => {
   for (const button of buttons) {
     button.addEventListener("click", () => {
       percent += +button.textContent;
-      console.log(percent);
+      
+      
+      //console.log(percent);
     });
   }
 };
