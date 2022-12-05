@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+
+  <body>
+    <!-- TITLE -->
+    <h1>SPLI<br />TTER</h1>
+
+    <!-- APP -->
+    <div class="bill-splitter">
+      <!-- CALCULATOR -->
+      <div class="tip-calc">
+        <!-- BILL-INPUT -->
+        <h2 class="title">Bill</h2>
+        <div class="input-field">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <input type="text" placeholder="0" class="bill-input" id="bill" />
+        </div>
+        <!-- BUTTONS -->
+        <h2 class="title title-alt">Select tip %</h2>
+        <div class="buttons">
+          <button class="btn">5</button>
+          <button class="btn">10</button>
+          <button class="btn">15</button>
+          <button class="btn">25</button>
+          <button class="btn">50</button>
+          <button class="custom-btn">
+            <input type="text" placeholder="Custom" />
+          </button>
+        </div>
+        <!-- NUMBER OF PEOPLE -->
+        <h2 class="title title-alt">Number of people</h2>
+        <div class="input-field">
+          <i class="fa-solid fa-user"></i>
+          <input
+            type="text"
+            placeholder="0"
+            class="bill-input"
+            id="numberOfPeople"
+          />
+        </div>
+      </div>
+      <!-- TIP CALCULATIONS -->
+      <div class="tip-amount">
+        <div class="tip tip-calc-amount">
+          <h2>Tip Amount<br /><span>/ person</span></h2>
+          <p class="bill" id="tip-amount">$0.00</p>
+        </div>
+        <div class="tip tip-calc-total">
+          <h2>Total<br /><span>/ person</span></h2>
+          <p class="bill" id="tip-calc-total">$0.00</p>
+        </div>
+        <button class="reset-btn" id="reset">CALCULATE</button>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">ElimDroflem </a>.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
